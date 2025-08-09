@@ -176,7 +176,7 @@
 		if(!empty($contactNameOne))
 		{
 		    $contactTypeOne = !empty($contactTypeOne)? $contactTypeOne : "Mail";
-		    $ico = "INSERT INTO user_contact (user_id,contact_type,contact_data) VALUES (?,?,?);";
+		    $ico = "INSERT INTO user_contact (user_uno,contact_type,contact_data) VALUES (?,?,?);";
 		    
 		    $icoprepare = mysqli_prepare($connection, $ico);
 		    mysqli_stmt_bind_param($icoprepare, 'iss', $rowUserData['uno'], $contactTypeOne, $contactNameOne);
@@ -186,7 +186,7 @@
 		if(!empty($contactNameTwo))
 		{
 		    $contactTypeTwo = !empty($contactTypeTwo)? $contactTypeTwo : "Mail";
-		    $ict = "INSERT INTO user_contact (user_id,contact_type,contact_data) VALUES (?,?,?);";
+		    $ict = "INSERT INTO user_contact (user_uno,contact_type,contact_data) VALUES (?,?,?);";
 		    
 		    $ictprepare = mysqli_prepare($connection, $ict);
 		    mysqli_stmt_bind_param($ictprepare, 'iss', $rowUserData['uno'], $contactTypeTwo, $contactNameTwo);
@@ -196,7 +196,7 @@
 		if(!empty($contactNameThree))
 		{
 		    $contactTypeThree = !empty($contactTypeThree)? $contactTypeThree : "Mail";
-		    $icth = "INSERT INTO user_contact (user_id,contact_type,contact_data) VALUES (?,?,?);";
+		    $icth = "INSERT INTO user_contact (user_uno,contact_type,contact_data) VALUES (?,?,?);";
 		    
 		    $icthprepare = mysqli_prepare($connection, $icth);
 		    mysqli_stmt_bind_param($icthprepare, 'iss', $rowUserData['uno'], $contactTypeThree, $contactNameThree);
